@@ -1,0 +1,6 @@
+name: TextureDump
+main: gecko10000.texturedump.TextureDump
+version: 0.1
+api-version: 1.13
+depend:
+  - RedLib

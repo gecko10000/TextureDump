@@ -1,0 +1,6 @@
+texturedump string:filename?(dump.yml) {
+    hook dump
+    help Dumps head textures in your inv to a file
+    permission texturedump.use
+    user player
+}
