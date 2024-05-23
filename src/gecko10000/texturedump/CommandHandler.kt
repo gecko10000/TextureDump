@@ -39,12 +39,13 @@ class CommandHandler : KoinComponent {
             serializer = Textures.serializer()
         )
         val existingHashes = fileManager.value.hashes
+        val existingSize = existingHashes.size
         val newHashes = hashes.plus(existingHashes)
             .toSet()
         fileManager.value.hashes.clear()
         fileManager.value.hashes.addAll(newHashes)
         fileManager.save()
-        player.sendMessage(MM.deserialize("<green>Added ${newHashes.size - existingHashes.size} hashes (${newHashes.size} total) to $filename."))
+        player.sendMessage(MM.deserialize("<green>Added ${newHashes.size - existingSize} hashes (${newHashes.size} total) to $filename."))
     }
 
 }
